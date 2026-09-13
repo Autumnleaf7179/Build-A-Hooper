@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 from urllib.parse import urlsplit
 
-from offline_game_patch import CHUNK_NAME, patch_game_chunk
+from offline_game_patch import ATTRIBUTES, CHUNK_NAME, attribute_records, patch_game_chunk
 
 
 ROOT = Path(__file__).resolve().parent
@@ -20,7 +20,13 @@ def load_offline_database():
     database_path = ROOT / "data" / "database.json"
     if not database_path.exists():
         return {"version": 1, "attributes": [], "players": [], "teams": {}}
-    return json.loads(database_path.read_text(encoding="utf-8"))
+    database = json.loads(database_path.read_text(encoding="utf-8"))
+    # The imported database file from the first offline pass has an older
+    # attribute catalog. Keep the browser schema complete until that file is
+    # manually edited to contain the current catalog.
+    if len(database.get("attributes", [])) != len(ATTRIBUTES):
+        database["attributes"] = attribute_records()
+    return database
 
 
 class OfflineHandler(SimpleHTTPRequestHandler):
