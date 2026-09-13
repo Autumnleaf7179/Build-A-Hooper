@@ -1,0 +1,378 @@
+{
+  "version": 1,
+  "attributes": [
+    {
+      "key": "3PT",
+      "name": "Three-Point Shooting",
+      "shortName": "3PT",
+      "description": "Three-point shooting.",
+      "category": "shooting"
+    },
+    {
+      "key": "MID",
+      "name": "Midrange",
+      "shortName": "MID",
+      "description": "Midrange scoring.",
+      "category": "shooting"
+    },
+    {
+      "key": "FIN",
+      "name": "Finishing",
+      "shortName": "FIN",
+      "description": "Finishing around the rim.",
+      "category": "finishing"
+    },
+    {
+      "key": "DNK",
+      "name": "Dunking",
+      "shortName": "DNK",
+      "description": "Dunks, contact, and rim pressure.",
+      "category": "finishing"
+    },
+    {
+      "key": "HAN",
+      "name": "Ball Handle",
+      "shortName": "HAN",
+      "description": "Dribbling and ball control.",
+      "category": "playmaking"
+    },
+    {
+      "key": "PAS",
+      "name": "Passing",
+      "shortName": "PAS",
+      "description": "Passing and play creation.",
+      "category": "playmaking"
+    },
+    {
+      "key": "PDEF",
+      "name": "Perimeter Defense",
+      "shortName": "PDEF",
+      "description": "Point-of-attack defense and pressure.",
+      "category": "defense"
+    },
+    {
+      "key": "IDEF",
+      "name": "Interior Defense",
+      "shortName": "IDEF",
+      "description": "Paint defense and post resistance.",
+      "category": "defense"
+    },
+    {
+      "key": "BLK",
+      "name": "Blocks",
+      "shortName": "BLK",
+      "description": "Rim protection and blocks.",
+      "category": "defense"
+    },
+    {
+      "key": "REB",
+      "name": "Rebounding",
+      "shortName": "REB",
+      "description": "Offensive and defensive rebounding.",
+      "category": "defense"
+    },
+    {
+      "key": "ATH",
+      "name": "Athleticism",
+      "shortName": "ATH",
+      "description": "Speed, explosiveness, agility, and vertical.",
+      "category": "physical"
+    },
+    {
+      "key": "STR",
+      "name": "Strength / Physicality",
+      "shortName": "STR",
+      "description": "Strength, contact, and physical presence.",
+      "category": "physical"
+    },
+    {
+      "key": "CLU",
+      "name": "Clutch / IQ",
+      "shortName": "CLU",
+      "description": "Decision-making and late-game consistency.",
+      "category": "mental"
+    },
+    {
+      "key": "HGT",
+      "name": "Height",
+      "shortName": "HGT",
+      "description": "Size and positional length.",
+      "category": "physical"
+    },
+    {
+      "key": "WGT",
+      "name": "Weight",
+      "shortName": "WGT",
+      "description": "Mass, strength base, and physical presence.",
+      "category": "physical"
+    },
+    {
+      "key": "END",
+      "name": "Injury Risk / Endurance",
+      "shortName": "END",
+      "description": "Availability, stamina, and resistance to fatigue and injury.",
+      "category": "physical"
+    },
+    {
+      "key": "OBIQ",
+      "name": "Offensive On-Ball IQ",
+      "shortName": "OBIQ",
+      "description": "Reads and decisions while handling the ball.",
+      "category": "mental"
+    },
+    {
+      "key": "OFIQ",
+      "name": "Offensive Off-Ball IQ",
+      "shortName": "OFIQ",
+      "description": "Spacing, cutting, screening, and movement away from the ball.",
+      "category": "mental"
+    },
+    {
+      "key": "DBIQ",
+      "name": "Defensive On-Ball IQ",
+      "shortName": "DBIQ",
+      "description": "Point-of-attack reads, positioning, and screen navigation.",
+      "category": "mental"
+    },
+    {
+      "key": "DFIQ",
+      "name": "Defensive Off-Ball IQ",
+      "shortName": "DFIQ",
+      "description": "Help defense, rotations, tagging, and communication.",
+      "category": "mental"
+    },
+    {
+      "key": "CVIS",
+      "name": "Court Vision",
+      "shortName": "CVIS",
+      "description": "Sees passing windows and develops plays before they open.",
+      "category": "playmaking"
+    },
+    {
+      "key": "WRK",
+      "name": "Work Rate",
+      "shortName": "WRK",
+      "description": "Consistent effort, activity, and willingness to do the small things.",
+      "category": "mental"
+    }
+  ],
+  "players": [
+    {
+      "id": "michael_jordan",
+      "name": "Michael Jordan",
+      "attributes": {
+        "HGT": 86,
+        "WGT": 78,
+        "END": 96,
+        "OBIQ": 97,
+        "OFIQ": 95,
+        "DBIQ": 94,
+        "DFIQ": 91,
+        "CVIS": 87,
+        "WRK": 98,
+        "PDIQ": 94,
+        "IDIQ": 72
+      }
+    },
+    {
+      "id": "magic_johnson",
+      "name": "Magic Johnson",
+      "attributes": {
+        "HGT": 97,
+        "WGT": 86,
+        "END": 92,
+        "OBIQ": 99,
+        "OFIQ": 95,
+        "DBIQ": 82,
+        "DFIQ": 84,
+        "CVIS": 99,
+        "WRK": 91,
+        "PDIQ": 82,
+        "IDIQ": 78
+      }
+    },
+    {
+      "id": "lebron_james",
+      "name": "LeBron James",
+      "attributes": {
+        "HGT": 94,
+        "WGT": 91,
+        "END": 95,
+        "OBIQ": 98,
+        "OFIQ": 94,
+        "DBIQ": 88,
+        "DFIQ": 90,
+        "CVIS": 98,
+        "WRK": 94,
+        "PDIQ": 88,
+        "IDIQ": 86
+      }
+    }
+  ],
+  "teams": {
+    "franchises": [],
+    "teamSeasons": [
+      {
+        "id": "lakers_1983_84",
+        "franchiseId": "lakers",
+        "season": "1983-84",
+        "displayName": "Los Angeles Lakers 1983-84",
+        "era": "80s Showtime",
+        "wins": 54,
+        "losses": 28,
+        "playoffResult": "NBA Finals",
+        "isCurrent": false,
+        "isHistorical": true,
+        "teamOverall": 95,
+        "offenseRating": 98,
+        "defenseRating": 88,
+        "pace": 96,
+        "spacing": 72,
+        "rebounding": 88,
+        "starPower": 99,
+        "depth": 90,
+        "clutch": 94,
+        "allowedInBuildPool": true,
+        "allowedInSimPool": false
+      },
+      {
+        "id": "lakers_2000_01",
+        "franchiseId": "lakers",
+        "season": "2000-01",
+        "displayName": "Los Angeles Lakers 2000-01",
+        "era": "Shaq & Kobe",
+        "wins": 56,
+        "losses": 26,
+        "playoffResult": "NBA Champions",
+        "isCurrent": false,
+        "isHistorical": true,
+        "teamOverall": 97,
+        "offenseRating": 96,
+        "defenseRating": 94,
+        "pace": 82,
+        "spacing": 75,
+        "rebounding": 94,
+        "starPower": 99,
+        "depth": 84,
+        "clutch": 97,
+        "allowedInBuildPool": true,
+        "allowedInSimPool": false
+      },
+      {
+        "id": "bulls_1995_96",
+        "franchiseId": "bulls",
+        "season": "1995-96",
+        "displayName": "Chicago Bulls 1995-96",
+        "era": "Second Three-Peat",
+        "wins": 72,
+        "losses": 10,
+        "playoffResult": "NBA Champions",
+        "isCurrent": false,
+        "isHistorical": true,
+        "teamOverall": 98,
+        "offenseRating": 96,
+        "defenseRating": 99,
+        "pace": 84,
+        "spacing": 78,
+        "rebounding": 96,
+        "starPower": 99,
+        "depth": 91,
+        "clutch": 99,
+        "allowedInBuildPool": true,
+        "allowedInSimPool": false
+      },
+      {
+        "id": "warriors_2015_16",
+        "franchiseId": "warriors",
+        "season": "2015-16",
+        "displayName": "Golden State Warriors 2015-16",
+        "era": "Splash Era",
+        "wins": 73,
+        "losses": 9,
+        "playoffResult": "NBA Finals",
+        "isCurrent": false,
+        "isHistorical": true,
+        "teamOverall": 97,
+        "offenseRating": 99,
+        "defenseRating": 93,
+        "pace": 97,
+        "spacing": 99,
+        "rebounding": 84,
+        "starPower": 97,
+        "depth": 93,
+        "clutch": 94,
+        "allowedInBuildPool": true,
+        "allowedInSimPool": false
+      },
+      {
+        "id": "heat_2012_13",
+        "franchiseId": "heat",
+        "season": "2012-13",
+        "displayName": "Miami Heat 2012-13",
+        "era": "Heatles",
+        "wins": 66,
+        "losses": 16,
+        "playoffResult": "NBA Champions",
+        "isCurrent": false,
+        "isHistorical": true,
+        "teamOverall": 97,
+        "offenseRating": 98,
+        "defenseRating": 94,
+        "pace": 90,
+        "spacing": 91,
+        "rebounding": 80,
+        "starPower": 99,
+        "depth": 87,
+        "clutch": 98,
+        "allowedInBuildPool": true,
+        "allowedInSimPool": false
+      },
+      {
+        "id": "mavericks_2023_24",
+        "franchiseId": "mavericks",
+        "season": "2023-24",
+        "displayName": "Dallas Mavericks 2023-24",
+        "era": "Luka & Kyrie",
+        "wins": 50,
+        "losses": 32,
+        "playoffResult": "NBA Finals",
+        "isCurrent": false,
+        "isHistorical": true,
+        "teamOverall": 93,
+        "offenseRating": 96,
+        "defenseRating": 87,
+        "pace": 91,
+        "spacing": 94,
+        "rebounding": 85,
+        "starPower": 96,
+        "depth": 84,
+        "clutch": 96,
+        "allowedInBuildPool": true,
+        "allowedInSimPool": false
+      },
+      {
+        "id": "spurs_2013_14",
+        "franchiseId": "spurs",
+        "season": "2013-14",
+        "displayName": "San Antonio Spurs 2013-14",
+        "era": "Beautiful Game",
+        "wins": 62,
+        "losses": 20,
+        "playoffResult": "NBA Champions",
+        "isCurrent": false,
+        "isHistorical": true,
+        "teamOverall": 96,
+        "offenseRating": 97,
+        "defenseRating": 95,
+        "pace": 88,
+        "spacing": 93,
+        "rebounding": 89,
+        "starPower": 93,
+        "depth": 99,
+        "clutch": 95,
+        "allowedInBuildPool": true,
+        "allowedInSimPool": false
+      }
+    ]
+  }
+}

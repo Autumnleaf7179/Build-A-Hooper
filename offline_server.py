@@ -6,6 +6,7 @@ No request is proxied to the source website.
 """
 
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+import json
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -13,6 +14,13 @@ from offline_game_patch import CHUNK_NAME, patch_game_chunk
 
 
 ROOT = Path(__file__).resolve().parent
+
+
+def load_offline_database():
+    database_path = ROOT / "data" / "database.json"
+    if not database_path.exists():
+        return {"version": 1, "attributes": [], "players": [], "teams": {}}
+    return json.loads(database_path.read_text(encoding="utf-8"))
 
 
 class OfflineHandler(SimpleHTTPRequestHandler):
@@ -37,6 +45,17 @@ class OfflineHandler(SimpleHTTPRequestHandler):
             document = document.replace(
                 b"https://x.com/BuildAHooper", b"#"
             )
+            database = json.dumps(
+                load_offline_database(),
+                ensure_ascii=False,
+                separators=(",", ":"),
+            ).encode("utf-8")
+            bootstrap = (
+                b'<script>window.__OFFLINE_DATABASE__='
+                + database
+                + b";</script>"
+            )
+            document = document.replace(b"</head>", bootstrap + b"</head>", 1)
             self.send_response(200)
             self.send_header("Content-Type", "text/html; charset=utf-8")
             self.send_header("Content-Length", str(len(document)))

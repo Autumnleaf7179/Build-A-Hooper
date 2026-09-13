@@ -1,0 +1,1 @@
+- [Offline game data layer](data-layer.md) — local JSON is bootstrapped before the captured bundle and overrides matching records while preserving fallback compatibility.

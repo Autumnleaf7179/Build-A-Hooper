@@ -23,6 +23,22 @@ resolve correctly from the filesystem. Open the Replit Preview while the
 `python3 offline_server.py` from this folder and open
 `http://localhost:5000/`.
 
+On Windows, double-click `run_offline.bat`. It starts the local Python server
+from the project folder and opens the local app in the default browser. Python
+3 must be installed and available as either `py` or `python`.
+
+## Local game database
+
+The editable game data lives in `data/database.json`. The server loads this
+file into the page before the captured game JavaScript runs. Player records
+override matching imported player stats by stable ID, and team franchise or
+team-season records can override existing IDs or add complete new records.
+`data/README.md` documents the record shape.
+
+The imported bundle remains as a fallback for the original historical pool, so
+the app still has its existing teams and players when the local database only
+contains a few overrides.
+
 ## Current offline boundary
 
 The root page and its downloaded JavaScript, CSS, fonts, and icons work
