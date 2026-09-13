@@ -16,6 +16,13 @@ proxies requests to the original website. Captured client routes fall back to
 the downloaded `index.html` so they remain local instead of producing a
 missing-page request.
 
+Do not open `index.html` by double-clicking it. That uses a `file://` URL, and
+the captured Next.js assets use root-relative paths that browsers cannot
+resolve correctly from the filesystem. Open the Replit Preview while the
+`Start application` workflow is running instead. On another computer, run
+`python3 offline_server.py` from this folder and open
+`http://localhost:5000/`.
+
 ## Current offline boundary
 
 The root page and its downloaded JavaScript, CSS, fonts, and icons work
