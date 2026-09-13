@@ -9,6 +9,8 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit
 
+from offline_game_patch import CHUNK_NAME, patch_game_chunk
+
 
 ROOT = Path(__file__).resolve().parent
 
@@ -16,6 +18,18 @@ ROOT = Path(__file__).resolve().parent
 class OfflineHandler(SimpleHTTPRequestHandler):
     def do_GET(self):
         clean_path = urlsplit(self.path).path
+        if clean_path == f"/_next/static/chunks/{CHUNK_NAME}":
+            document = patch_game_chunk(
+                (ROOT / "_next/static/chunks" / CHUNK_NAME).read_text(
+                    encoding="utf-8"
+                )
+            ).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/javascript")
+            self.send_header("Content-Length", str(len(document)))
+            self.end_headers()
+            self.wfile.write(document)
+            return
         if clean_path in ("/", "/achievements", "/leaderboard", "/login"):
             # Remove the only outbound link from the captured document at
             # response time without rewriting the one-line HTML export.
